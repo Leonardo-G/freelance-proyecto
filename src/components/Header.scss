@@ -1,0 +1,64 @@
+@import "../styles//variables.scss";
+
+.container{
+    width: min(125rem, 95%);
+    margin: 0 auto;
+}
+
+.navegacion{
+    display: flex;
+    column-gap: 4rem;
+    margin-top: 3rem;
+    justify-content: right;
+    .enlace{
+        text-decoration: none;
+        font-size: 3.6rem;
+        color: $col-primario;
+        font-weight: 600;
+        // letter-spacing: -2px;
+    }
+}
+
+.header{
+    margin-top: 14rem;
+    display: flex;
+    align-items: center;
+    column-gap: 5rem;
+    .header__mano{
+        animation-name: mano-saludo;
+        animation-iteration-count: infinite;
+        animation-duration: 1.56s;
+    }
+    .info-saludo{
+        .saludo-hola{
+            margin-bottom: 2rem;
+        }
+    }
+    .info-texto{
+        font-family: "Public Sans", sans-serif;
+        font-weight: 600;
+        font-size: 3.8rem;
+        color: $col-primario;
+    }
+}
+
+@keyframes mano-saludo{
+    0%{
+        transform: rotate(20deg);
+    }
+    15%{
+        transform: rotate(-30deg);
+    }
+    30%{
+        transform: rotate(20deg);
+    }
+    45%{
+        transform: rotate(-30deg);
+    }
+    60%{
+        transform: rotate(20deg);
+    }
+    75%{
+        transform: rotate(0);
+    }
+}

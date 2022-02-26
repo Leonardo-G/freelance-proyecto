@@ -1,9 +1,13 @@
+import { AppRouter } from "./routers/AppRouter";
+
+import "./styles/variables.scss";
+import "./styles/base.scss";
+
 function App() {
   return (
-    <div className="App">
-      <h1>asdad</h1>
-    
-    </div>
+    <AppRouter>
+      
+    </AppRouter>
   );
 }
 
