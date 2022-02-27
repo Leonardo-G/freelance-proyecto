@@ -1,0 +1,51 @@
+@import "../styles/variables.scss";
+
+.tecnologias{
+    margin: 12rem 0;
+}
+
+.caja{
+    background-color: $col-secundario;
+    position: relative;
+    border-radius: 0px 70px;
+    height: 104rem;
+    margin-top: 12rem;
+    .caja__btn-left{
+        position: absolute;
+        top: 50%;
+        left: 2.5%;
+        transform: translateY(-50%);
+    }
+    .caja__btn-right{
+        position: absolute;
+        top: 50%;
+        right: 2.5%;
+        transform: translateY(-50%);
+    }
+    .caja__iconos{
+        padding: 10rem;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 5rem;
+        justify-content: center;
+    }
+    .caja__borde{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #f9fafb;
+        width: 35rem;
+        padding: 1rem 0;
+        border: 1px solid #C1DCEB;
+        border-radius: 0px 70px;
+        p{
+            font-size: 4.8rem;
+            font-weight: 700;
+            font-family: $fue-principal;
+            color: $col-primario;
+            text-align: center;
+        }
+    }
+}

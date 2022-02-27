@@ -4,6 +4,7 @@ import "./Header.scss";
 import logo from "../assets/logo.svg";
 import mano from "../assets/mano.svg";
 import hola from "../assets/hola.svg";
+import { Tecnologias } from './Tecnologias';
 
 export const Header = () => {
     return (
@@ -11,8 +12,8 @@ export const Header = () => {
             <section>
                 <nav className='navegacion'>
                     <a href='#proyecto' className='enlace'>Proyecto</a>
-                    <a className='enlace'>Tecnologías</a>
-                    <a className='enlace'>Contacto</a>
+                    <a href='#tecnologia' className='enlace'>Tecnologías</a>
+                    <a href='#contacto' className='enlace'>Contacto</a>
                 </nav>
                 <div className='header'>
                     <img src={ logo } alt="logo"/>
@@ -25,6 +26,7 @@ export const Header = () => {
                     </div>
                 </div>
             </section>
+            <Tecnologias />
         </div>
     )
 }
