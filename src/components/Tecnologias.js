@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import btn_left from "../assets/arrow-left-circle.svg";
 import btn_right from "../assets/arrow-right-circle.svg";
@@ -10,8 +10,24 @@ import ide4 from "../assets/ides/vsc.svg";
 import ide5 from "../assets/ides/ij-ide.svg";
 
 import "./Tecnologias.scss";
+import { Tecnologia } from './Tecnologia';
+
+const tecnologiasArray = [
+    { tipo: "IDE", src: ide1, alt: "ide1" },
+    { tipo: "IDE", src: ide2, alt: "ide2" },
+    { tipo: "IDE", src: ide3, alt: "ide3" },
+    { tipo: "IDE", src: ide4, alt: "ide4" },
+    { tipo: "IDE", src: ide5, alt: "ide5" }
+]
 
 export const Tecnologias = () => {
+
+    const [tecnologias, setTecnologias] = useState(tecnologiasArray)
+
+    // useEffect( () => {
+
+    // }, [])
+
     return (
         <section className='tecnologias'>
             <h2 className='titulo'>Tecnologías que uso</h2>
@@ -23,11 +39,11 @@ export const Tecnologias = () => {
                     <img src={ btn_left } alt="boton izquierdo"/>
                 </div>
                 <div className='caja__iconos'>
-                    <img src={ ide1 } alt="ide"/>
-                    <img src={ ide2 } alt="ide"/>
-                    <img src={ ide3 } alt="ide"/>
-                    <img src={ ide4 } alt="ide"/>
-                    <img src={ ide5 } alt="ide"/>
+                    {
+                        tecnologias.map( (tecnologia, idx) => (
+                            <Tecnologia key={ idx } { ...tecnologia }/>
+                        ))
+                    }
                 </div>
                 <div className='caja__btn-right'>
                     <img src={ btn_right } alt="boton derecho"/>
