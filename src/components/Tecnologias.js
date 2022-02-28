@@ -78,10 +78,7 @@ export const Tecnologias = () => {
 
     const handleClickLeft = () => {
 
-        if( numeroArray === 1 ){
-            numeroArray(tipos.length);
-            return;
-        }
+        
 
         const ref = document.querySelector(".flex-contenedor");
         const idx = ref.children.length - 1;
@@ -95,18 +92,19 @@ export const Tecnologias = () => {
         setTimeout(() => {
             ref.style.transition = "0.3s all ease-out"
             ref.style.transform = "translateX(0px)"
+
+            if( numeroArray === 1 ){
+                setNumeroArray(tipos.length);
+                return;
+            }
+
+            setNumeroArray( numeroArray - 1 )
+            
         }, 30);
         
     } 
 
     const handleClickRight = () => {
-
-        if( numeroArray >= Number(tipos.length) ){
-            setNumeroArray(1);
-            return
-        }
-
-        setNumeroArray( numeroArray + 1)
 
         const ref = document.querySelector(".flex-contenedor");
         console.log(ref);
@@ -117,6 +115,13 @@ export const Tecnologias = () => {
         // ref.firstElementChild.remove()
         
         ref.addEventListener("transitionend", handleFinTransicion)
+        
+        if( numeroArray >= Number(tipos.length) ){
+            setNumeroArray(1);
+            return
+        }
+
+        setNumeroArray( numeroArray + 1)
     }
 
     const handleFinTransicion = () => {

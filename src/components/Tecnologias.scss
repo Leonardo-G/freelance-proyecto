@@ -15,7 +15,6 @@
     border-radius: 0px 70px;
     height: 104rem;
     margin-top: 12rem;
-    overflow: hidden;
     .caja__btn-left{
         position: absolute;
         top: 50%;
@@ -31,6 +30,8 @@
     .caja__flex{
         height: 100%;
         padding: 10rem;
+        width: 110rem;
+        overflow: hidden;
     }
     .flex-contenedor{
         height: 100%;
