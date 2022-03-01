@@ -47,12 +47,6 @@
         column-gap: 5rem;
         justify-content: center;
     }
-    .ancho-ventana{
-        width: 105rem;
-    }
-    .ancho-iconos{
-        width: 105rem;
-    }
     .caja__borde{
         position: absolute;
         top: 0;
@@ -103,6 +97,7 @@
 
 @media (max-width: 620px) {
     .caja{
+        height: 85rem;
         .caja__borde{
             p{
                 font-size: 3.5rem;

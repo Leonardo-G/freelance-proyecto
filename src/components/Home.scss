@@ -91,3 +91,11 @@
         text-align: center;
     }
 }
+
+@media (max-width: 420px) {
+    .header{
+        .info-texto{
+            font-size: 3rem;        
+        }
+    }
+}

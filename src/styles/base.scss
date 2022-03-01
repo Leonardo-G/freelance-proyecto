@@ -8,6 +8,7 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior:smooth;
 }
 
 a, h2{
@@ -19,4 +20,23 @@ a, h2{
     font-size: 4.8rem;
     color: $col-primario;
     text-align: center;
+    position: relative;
+    padding-bottom: 2.5rem;
+    &::after{
+        content: "";
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10rem;
+        height: 0.4rem;
+        background-color: $col-secundario;
+        position: absolute;
+        border-radius: 2px;
+    }
+}
+
+@media (max-width: 420px) {
+    .titulo{
+        font-size: 3.5rem;
+    }
 }

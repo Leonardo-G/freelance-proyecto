@@ -15,6 +15,7 @@ export const Integraciones = () => {
     const observerCallback = (entries, observer) => {
         if(entries[0].isIntersecting){
             entries[0].target.classList.add("true");
+            observer.disconnect()
         }
     }
 
@@ -33,7 +34,7 @@ export const Integraciones = () => {
 
     return (
         <section>
-            <h2 className='titulo'>Integraciones con</h2>
+            <h2 className='titulo titulo-integracion'>Integraciones con</h2>
             <div className='integracion'>
                 <img className='mer_libre animacion_1' src={ mer_libre } alt="logo mercado libre"/>
                 <img className='mer_pago animacion_2' src={ mer_pago } alt="logo mercado pago"/>

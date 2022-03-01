@@ -1,5 +1,9 @@
+.titulo.titulo-integracion{
+    display: inline-block;
+}
+
 .integracion{
-    margin-top: 20rem;
+    margin-top: 12.5rem;
     display: flex;
     column-gap: 10rem;
     flex-wrap: wrap;
@@ -49,5 +53,51 @@
     }
     .animacion_6{
         transition-delay: 2.5s;
+    }
+}
+
+@media (max-width: 1100px) {
+    .integracion{
+        img{
+            height: 20rem;
+        }
+        .openstreetmap{
+            height: 15rem;
+        }
+        .bamboo{
+            height: 10rem;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .integracion{
+        height: 90rem;
+        margin-top: 10rem;
+        img{
+            height: 12.5rem;
+        }
+        .openstreetmap{
+            height: 10rem;
+        }
+        .bamboo{
+            height: 8rem;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .integracion{
+        height: 65rem;
+        column-gap: 4rem;
+        img{
+            height: 10rem;
+        }
+        .openstreetmap{
+            height: 5rem;
+        }
+        .bamboo{
+            height: 5rem;
+        }
     }
 }

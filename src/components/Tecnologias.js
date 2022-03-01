@@ -126,7 +126,7 @@ export const Tecnologias = () => {
         const ref = document.querySelector(".flex-contenedor");
         console.log(ref);
 
-        ref.style.transform = "translateX(-1050px)"
+        ref.style.transform = `translateX(-${ref.firstElementChild.offsetWidth}px)`
         ref.style.transition = "0.3s all ease-out"
         
         ref.addEventListener("transitionend", handleFinTransicion)
@@ -152,7 +152,7 @@ export const Tecnologias = () => {
 
 
     return (
-        <section className='tecnologias'>
+        <section id='tecnologia' className='tecnologias'>
             <h2 className='titulo'>Tecnologías que uso</h2>
             <div className='caja'>
                 <div className='caja__borde'>

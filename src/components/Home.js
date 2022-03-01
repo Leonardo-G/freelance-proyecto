@@ -13,11 +13,11 @@ export const Home = () => {
     return (
         <div className='container'>
             <section>
-                {/* <nav className='navegacion'>
+                <nav className='navegacion'>
                     <a href='#proyecto' className='enlace'>Proyecto</a>
                     <a href='#tecnologia' className='enlace'>Tecnologías</a>
                     <a href='#contacto' className='enlace'>Contacto</a>
-                </nav> */}
+                </nav>
                 <div className='header'>
                     <img className='header__logo' src={ logo } alt="logo"/>
                     <div className='header__info'>
