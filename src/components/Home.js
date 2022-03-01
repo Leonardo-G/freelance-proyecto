@@ -5,8 +5,9 @@ import logo from "../assets/logo.svg";
 import mano from "../assets/mano.svg";
 import hola from "../assets/hola.svg";
 import { Tecnologias } from './Tecnologias';
+import { Integraciones } from './Integraciones';
 
-export const Header = () => {
+export const Home = () => {
     return (
         <div className='container'>
             <section>
@@ -27,6 +28,7 @@ export const Header = () => {
                 </div>
             </section>
             <Tecnologias />
+            <Integraciones />
         </div>
     )
 }

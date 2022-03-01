@@ -1,0 +1,53 @@
+.integracion{
+    margin-top: 20rem;
+    display: flex;
+    column-gap: 10rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 120rem;
+    .mer_libre, .mer_pago, .pedidos_ya, .bamboo, .openstreetmap, .google_maps{
+        transform: translateY(100%);
+        opacity: 0;
+        transition: .9s all ease-in-out;
+    }
+    .pedidos_ya{
+        border-radius: 60px;
+    }
+    .bamboo{
+        height: 12.5rem;
+        width: auto;
+    }
+    .openstreetmap{
+        height: 19rem;
+    }
+    img{
+        object-fit: cover;
+        object-position: center;
+        width: auto;
+        height: 25rem;
+    }
+}
+
+.true{
+    .animacion_1, .animacion_2, .animacion_3, .animacion_4, .animacion_5, .animacion_6{
+        transform: translateY(0%);
+        opacity: 1;
+        transition: .9s all ease-in-out;
+    }
+    .animacion_2{
+        transition-delay: .5s;
+    }
+    .animacion_3{
+        transition-delay: 1s;
+    }
+    .animacion_4{
+        transition-delay: 1.5s;
+    }
+    .animacion_5{
+        transition-delay: 2s;
+    }
+    .animacion_6{
+        transition-delay: 2.5s;
+    }
+}
