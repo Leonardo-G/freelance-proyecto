@@ -80,3 +80,14 @@
         }
     }
 }
+
+@media (max-width: 620px) {
+    .header{
+        .header__logo{
+            width: 100%;
+        }
+    }
+    .header__info{
+        text-align: center;
+    }
+}

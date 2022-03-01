@@ -66,7 +66,6 @@ const tecnologiasArray = [
 const tipos = ["IDE", "Lenguajes de programación", "Frameworks", "Frameworks mobile"]
 
 export const Tecnologias = () => {
-
     
     const [anchoVentana, setAnchoVentana] = useState(null)
     const [numeroArray, setNumeroArray] = useState(1);
@@ -106,10 +105,10 @@ export const Tecnologias = () => {
         ref.insertBefore(ultimoElemento, ref.firstChild);
 
         ref.style.transition = "none"
-        ref.style.transform = "translateX(-1050px)"
+        ref.style.transform = `translateX(-${ref.firstElementChild.offsetWidth}px)`
         
         setTimeout(() => {
-            ref.style.transition = "0.3s all ease-out"
+            ref.style.transition = ".3s all ease-out"
             ref.style.transform = "translateX(0px)"
 
             if( numeroArray === 1 ){
