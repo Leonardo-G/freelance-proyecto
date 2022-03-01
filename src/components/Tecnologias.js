@@ -67,18 +67,37 @@ const tipos = ["IDE", "Lenguajes de programación", "Frameworks", "Frameworks mo
 
 export const Tecnologias = () => {
 
+    
+    const [anchoVentana, setAnchoVentana] = useState(null)
     const [numeroArray, setNumeroArray] = useState(1);
     const [tipoActual, setTipoActual] = useState(tipos[0])
+ 
+    window.addEventListener("resize", () => {
+        //Ancho de ventana.
+        const ancho = document.querySelector(".caja__flex").offsetWidth;
+        if( ancho >= 1100 ){
+            setAnchoVentana( null );
+            return;
+        }
+        if( ancho < 1100){
+            setAnchoVentana(ancho)
+        }
+    })
 
     useEffect(() => {
         const tipoSeleccionado = tipos.filter( (tipo, idx) => (idx + 1) === numeroArray )[0]
-        console.log(tipoSeleccionado)
+        
         setTipoActual(tipoSeleccionado)
+        
+        //Ancho de ventana.
+        const ancho = document.querySelector(".caja__flex").offsetWidth;
+        if( ancho < 1100){
+            setAnchoVentana(ancho)
+            console.log(ancho)
+        }
     }, [numeroArray])
 
     const handleClickLeft = () => {
-
-        
 
         const ref = document.querySelector(".flex-contenedor");
         const idx = ref.children.length - 1;
@@ -98,8 +117,7 @@ export const Tecnologias = () => {
                 return;
             }
 
-            setNumeroArray( numeroArray - 1 )
-            
+            setNumeroArray( numeroArray - 1 );
         }, 30);
         
     } 
@@ -111,8 +129,6 @@ export const Tecnologias = () => {
 
         ref.style.transform = "translateX(-1050px)"
         ref.style.transition = "0.3s all ease-out"
-
-        // ref.firstElementChild.remove()
         
         ref.addEventListener("transitionend", handleFinTransicion)
         
@@ -135,6 +151,7 @@ export const Tecnologias = () => {
         ref.removeEventListener("transitionend", handleFinTransicion)
     }
 
+
     return (
         <section className='tecnologias'>
             <h2 className='titulo'>Tecnologías que uso</h2>
@@ -153,7 +170,7 @@ export const Tecnologias = () => {
                     <div className='flex-contenedor'>
                         {
                             tecnologiasArray.map( (tecnologia, idx) => (
-                                <Tecnologia key={ idx } tecnologia={ tecnologia }/>
+                                <Tecnologia key={ idx } anchoVentana={ anchoVentana } tecnologia={ tecnologia }/>
                             ))
                         }
                     </div>

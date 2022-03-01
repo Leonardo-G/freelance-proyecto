@@ -1,11 +1,13 @@
 import React from 'react';
 
-import "./Header.scss";
+import { Tecnologias } from './Tecnologias';
+import { Integraciones } from './Integraciones';
+
 import logo from "../assets/logo.svg";
 import mano from "../assets/mano.svg";
 import hola from "../assets/hola.svg";
-import { Tecnologias } from './Tecnologias';
-import { Integraciones } from './Integraciones';
+
+import "./Home.scss";
 
 export const Home = () => {
     return (
@@ -17,7 +19,7 @@ export const Home = () => {
                     <a href='#contacto' className='enlace'>Contacto</a>
                 </nav>
                 <div className='header'>
-                    <img src={ logo } alt="logo"/>
+                    <img className='header__logo' src={ logo } alt="logo"/>
                     <div className='header__info'>
                         <div className='info-saludo'>
                             <img className='saludo-hola' src={ hola } alt="text hola"/>

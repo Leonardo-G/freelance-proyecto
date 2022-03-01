@@ -62,3 +62,21 @@
         transform: rotate(0);
     }
 }
+
+@media (max-width: 1180px) {
+    .header{
+        column-gap: 1rem;
+        .header__logo{
+            width: 45rem;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .header{
+        flex-direction: column;
+        .header__logo{
+            min-width: 90%;
+        }
+    }
+}
