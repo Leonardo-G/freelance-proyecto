@@ -108,6 +108,7 @@ export const Tecnologias = () => {
         ref.style.transform = `translateX(-${ref.firstElementChild.offsetWidth}px)`
         
         setTimeout(() => {
+
             ref.style.transition = ".3s all ease-out"
             ref.style.transform = "translateX(0px)"
 
@@ -124,7 +125,6 @@ export const Tecnologias = () => {
     const handleClickRight = () => {
 
         const ref = document.querySelector(".flex-contenedor");
-        console.log(ref);
 
         ref.style.transform = `translateX(-${ref.firstElementChild.offsetWidth}px)`
         ref.style.transition = "0.3s all ease-out"
@@ -150,12 +150,11 @@ export const Tecnologias = () => {
         ref.removeEventListener("transitionend", handleFinTransicion)
     }
 
-
     return (
         <section id='tecnologia' className='tecnologias'>
             <h2 className='titulo'>Tecnologías que uso</h2>
             <div className='caja'>
-                <div className='caja__borde'>
+                <div className='caja__borde animacion-borde'>
                     <p>{ tipoActual }</p>
                 </div>
                 <div 

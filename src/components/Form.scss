@@ -1,0 +1,68 @@
+@import "../styles//variables.scss";
+
+.titulo-contacto{
+    font-weight: 700;
+    font-size: 4.8rem;
+    color: $col-primario;
+    text-align: center;
+    position: relative;
+    padding-bottom: 2.5rem;
+    font-family: $fue-principal;
+    margin-top: 4rem;
+    &:first-of-type{
+        margin-top: 6rem;
+    }
+}
+
+.contacto{
+    margin-top: 20rem;
+    .contacto__fondo{
+        background: rgba(193, 220, 235, 0.56);
+        width: 100%;
+        margin-top: 10rem;
+    }
+}
+
+.formulario{
+    margin: 0 auto;
+    max-width: 66rem;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    padding: 14.6rem 0;
+    row-gap: 1.6rem;
+    input, textarea{
+        font-size: 1.6rem;
+        border-radius: 27px;
+        border: none;
+        background-color: #F9FAFB;
+        padding: 2rem 3rem;
+        font-weight: 500;
+        outline: none;
+    }
+    input::placeholder, textarea::placeholder{
+        color: #9C9C9C;
+    }
+    textarea{
+        min-height: 19rem;
+        resize: none;
+    }
+    .btn-form{
+        display: inline-block;
+        width: 13rem;
+        background-color: $col-secundario;
+        border: 1px solid $col-secundario;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 31px;
+        cursor: pointer;
+        margin-top: 1.5rem;
+        font-weight: 600;
+        color: $col-primario
+    }
+}
+
+@media (max-width: 420px) {
+    .titulo-contacto{
+        font-size: 3.5rem;
+    }
+}
