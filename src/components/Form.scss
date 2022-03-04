@@ -1,5 +1,7 @@
 @import "../styles//variables.scss";
 
+
+
 .contacto{
     margin-top: 20rem;
     .titulo-contacto{
@@ -49,6 +51,13 @@
         }
         .btn-submit{
             background-color: $col-secundario;
+            margin-top: 0;
+        }
+        .formulario__error{
+            font-size: 1.5rem;
+            font-family: $fue-principal;
+            color: rgba(255, 0, 0, 0.842);
+            height: 2rem;
         }
     }
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Spinner } from './Spinner';
 
 import "../assets/mundo.png";
 
@@ -8,11 +9,8 @@ import videoForm from "../assets/correoenviado.mp4"
 
 export const Form = () => {
 
-    const [error, setError] = useState({
-        error: false,
-        msg: ""
-    })
-
+    const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false)
     const [inputsValues, setInputsValues] = useState({
         nombre: "",
         correo: "",
@@ -20,10 +18,62 @@ export const Form = () => {
         mensaje: ""
     })
 
+    const handleChangeValues = (e) => {
+        setInputsValues({
+            ...inputsValues,
+            [e.target.name]: e.target.value
+        })
+    }
+
     const enviarCorreo = async (e) => {
 
         e.preventDefault();
+        
+        const { nombre, correo, asunto, mensaje } = inputsValues
+        const isInputsEmpty = Object.values(inputsValues).some( input => input === "")
+        const regExp = new RegExp(/[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}/)
 
+        if(isInputsEmpty){
+            setError("Completar todos los campos");
+            return;
+        }
+
+        if( !regExp.test(correo) ){
+            setError("Ingresa un correo válido")
+            return
+        }
+        setLoading(true)
+        try {
+            const respuesta = await fetch( "https://api.emailjs.com/api/v1.0/email/send", {
+                method: "POST",
+                headers: {
+                    'accept': 'application/json',
+                    'Content-Type': 'application/json' 
+                },
+                body: JSON.stringify({
+                    user_id: 'sNZC8cZLNgcdtUgUm',
+                    service_id: 'service_b3nir69',
+                    template_id: 'template_ro5inwh',
+                    template_params: {
+                        nombre,
+                        asunto,
+                        correo,
+                        mensaje
+                    }
+                }),
+            })
+
+            if(!respuesta.ok){
+                throw new Error();
+            }
+
+            setLoading(false);
+            
+        } catch (error) {
+            setLoading(false)
+            setError("Error al enviar el mensaje, intentelo de nuevo más tarde.");
+            return;
+        }
 
         const bloque1 = document.querySelector("#bloque1");
         const bloque2 = document.querySelector("#bloque2");
@@ -40,26 +90,6 @@ export const Form = () => {
         setTimeout(() => {
             bloque4.style.display = "block"
         }, 1000);
-
-        // try {
-        //     const respuesta = await fetch( "https://api.emailjs.com/api/v1.0/email/send", {
-        //         method: "POST",
-        //         headers: {
-        //             'accept': 'application/json',
-        //             'Content-Type': 'application/json' 
-        //         },
-        //         body: JSON.stringify({
-        //             user_id: 'sNZC8cZLNgcdtUgUm',
-        //             service_id: 'service_b3nir69',
-        //             template_id: 'template_er5jifs'
-        //         }),
-        //     })
-        
-        //     console.log(await respuesta.text())
-            
-        // } catch (error) {
-        //     console.log(error)
-        // }
     }
 
     const handleReady = () => {
@@ -77,6 +107,10 @@ export const Form = () => {
 
     return (
         <section className='contacto'>
+            {
+                loading &&
+                <Spinner />
+            }
             <h2 className='titulo'>Contacto</h2>
             <p className='titulo-contacto'>¡Trabajemos juntos!</p>
             <p className='titulo-contacto'>Desde cualquier parte del mundo</p>
@@ -89,21 +123,26 @@ export const Form = () => {
                         type="text"
                         placeholder='Nombre'
                         name='nombre'
+                        onChange={ handleChangeValues }
                     />
                     <input 
                         type="email"
                         placeholder='Email'
                         name='correo'
+                        onChange={ handleChangeValues }
                     />
                     <input 
                         type="text"
                         placeholder='Asunto'
                         name='asunto'
+                        onChange={ handleChangeValues }
                     />
                     <textarea
                         placeholder='Tú mensaje...'
                         name='mensaje'
+                        onChange={ handleChangeValues }
                     ></textarea>
+                    <p className='formulario__error'>{ error }</p>
                     <input 
                         className='btn btn-submit'
                         type="submit"
