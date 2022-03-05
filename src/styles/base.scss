@@ -15,6 +15,11 @@ a, h2, h3, input, textarea{
     font-family: $fue-principal;
 }
 
+.container{
+    width: min(125rem, 95%);
+    margin: 0 auto;
+}
+
 .titulo{
     font-weight: 700;
     font-size: 4.8rem;

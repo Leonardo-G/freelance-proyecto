@@ -3,7 +3,7 @@
 }
 
 .integracion{
-    margin-top: 12.5rem;
+    margin: 12.5rem 0;
     display: flex;
     column-gap: 10rem;
     flex-wrap: wrap;
@@ -73,7 +73,7 @@
 @media (max-width: 620px) {
     .integracion{
         height: 90rem;
-        margin-top: 10rem;
+        margin: 10rem 0;
         img{
             height: 12.5rem;
         }

@@ -106,7 +106,7 @@ export const Form = () => {
     }
 
     return (
-        <section className='contacto'>
+        <section id='contacto' className='contacto'>
             {
                 loading &&
                 <Spinner />
