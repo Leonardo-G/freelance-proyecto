@@ -43,38 +43,38 @@ export const Form = () => {
         }
         setLoading(true);
 
-        // try {
-        //     const respuesta = await fetch( "https://api.emailjs.com/api/v1.0/email/send", {
-        //         method: "POST",
-        //         headers: {
-        //             'accept': 'application/json',
-        //             'Content-Type': 'application/json' 
-        //         },
-        //         body: JSON.stringify({
-        //             user_id: 'sNZC8cZLNgcdtUgUm',
-        //             service_id: 'service_b3nir69',
-        //             template_id: 'template_ro5inwh',
-        //             template_params: {
-        //                 nombre,
-        //                 asunto,
-        //                 correo,
-        //                 mensaje
-        //             }
-        //         }),
-        //     })
+        try {
+            const respuesta = await fetch( "https://api.emailjs.com/api/v1.0/email/send", {
+                method: "POST",
+                headers: {
+                    'accept': 'application/json',
+                    'Content-Type': 'application/json' 
+                },
+                body: JSON.stringify({
+                    user_id: 'sNZC8cZLNgcdtUgUm',
+                    service_id: 'service_b3nir69',
+                    template_id: 'template_ro5inwh',
+                    template_params: {
+                        nombre,
+                        asunto,
+                        correo,
+                        mensaje
+                    }
+                }),
+            })
 
-        //     if(!respuesta.ok){
-        //         throw new Error();
-        //     }
+            if(!respuesta.ok){
+                throw new Error();
+            }
 
-        //     setLoading(false);
+            setLoading(false);
             
-        // } catch (error) {
-        //     setLoading(false)
-        //     setError("Error al enviar el mensaje, intentelo de nuevo más tarde.");
-        //     return;
-        // }
-        setLoading(false);
+        } catch (error) {
+            setLoading(false)
+            setError("Error al enviar el mensaje, intentelo de nuevo más tarde.");
+            return;
+        }
+        
         const bloque1 = document.querySelector("#bloque1");
         const bloque2 = document.querySelector("#bloque2");
         const bloque3 = document.querySelector("#bloque3");

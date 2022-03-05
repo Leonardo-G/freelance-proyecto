@@ -9,6 +9,7 @@ import hola from "../assets/hola.svg";
 
 import "./Home.scss";
 import { Form } from './Form';
+import { Footer } from './Footer';
 
 export const Home = () => {
     return (
@@ -35,6 +36,7 @@ export const Home = () => {
                 <Integraciones />
             </div>
             <Form />
+            <Footer />
         </>
     )
 }

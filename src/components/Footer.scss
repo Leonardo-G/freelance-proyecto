@@ -1,0 +1,24 @@
+.footer{
+    padding: 10rem 0;
+    width: 100%;
+    text-align: center;
+    p{
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #828282;
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+    }
+    .footer__derechos{
+        margin-bottom: 2.5rem;
+    }
+    .footer__redes{
+        margin-bottom: 4.8rem;
+        a{
+            margin-left: 3.5rem;
+            &:first-of-type{
+                margin-left: 0;
+            }
+        }
+    }
+}
