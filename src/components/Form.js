@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Spinner } from './Spinner';
 
+import videoForm from "../assets/correoenviado.mp4";
+
 import "../assets/mundo.png";
-
 import "./Form.scss";
-
-import videoForm from "../assets/correoenviado.mp4"
 
 export const Form = () => {
 
@@ -42,39 +41,40 @@ export const Form = () => {
             setError("Ingresa un correo válido")
             return
         }
-        setLoading(true)
-        try {
-            const respuesta = await fetch( "https://api.emailjs.com/api/v1.0/email/send", {
-                method: "POST",
-                headers: {
-                    'accept': 'application/json',
-                    'Content-Type': 'application/json' 
-                },
-                body: JSON.stringify({
-                    user_id: 'sNZC8cZLNgcdtUgUm',
-                    service_id: 'service_b3nir69',
-                    template_id: 'template_ro5inwh',
-                    template_params: {
-                        nombre,
-                        asunto,
-                        correo,
-                        mensaje
-                    }
-                }),
-            })
+        setLoading(true);
 
-            if(!respuesta.ok){
-                throw new Error();
-            }
+        // try {
+        //     const respuesta = await fetch( "https://api.emailjs.com/api/v1.0/email/send", {
+        //         method: "POST",
+        //         headers: {
+        //             'accept': 'application/json',
+        //             'Content-Type': 'application/json' 
+        //         },
+        //         body: JSON.stringify({
+        //             user_id: 'sNZC8cZLNgcdtUgUm',
+        //             service_id: 'service_b3nir69',
+        //             template_id: 'template_ro5inwh',
+        //             template_params: {
+        //                 nombre,
+        //                 asunto,
+        //                 correo,
+        //                 mensaje
+        //             }
+        //         }),
+        //     })
 
-            setLoading(false);
+        //     if(!respuesta.ok){
+        //         throw new Error();
+        //     }
+
+        //     setLoading(false);
             
-        } catch (error) {
-            setLoading(false)
-            setError("Error al enviar el mensaje, intentelo de nuevo más tarde.");
-            return;
-        }
-
+        // } catch (error) {
+        //     setLoading(false)
+        //     setError("Error al enviar el mensaje, intentelo de nuevo más tarde.");
+        //     return;
+        // }
+        setLoading(false);
         const bloque1 = document.querySelector("#bloque1");
         const bloque2 = document.querySelector("#bloque2");
         const bloque3 = document.querySelector("#bloque3");

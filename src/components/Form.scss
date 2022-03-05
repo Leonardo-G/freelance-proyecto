@@ -3,7 +3,7 @@
 
 
 .contacto{
-    margin-top: 20rem;
+    margin: 20rem 0;
     .titulo-contacto{
         font-weight: 700;
         font-size: 4.8rem;
@@ -164,9 +164,50 @@
 }
 
 
+@media (max-width: 620px) {
+    .contacto{
+        .titulo-contacto{
+            font-size: 3.5rem;
+        }
+    }
+    .contacto__enviado{
+        .info-container{
+            width: 95%;
+            p{
+                font-size: 3rem;
+            }
+        }
+        .info-texto{
+            font-size: 3rem;
+        }
+        .enviado-video{
+            width: 95%;
+        }
+        .enviado-fondo{
+            .activo-titulo{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
 
 @media (max-width: 420px) {
-    .titulo-contacto{
-        font-size: 3.5rem;
+    .contacto__enviado{
+        .info-container{
+            p{
+                font-size: 2.2rem;
+            }
+        }
+        .info-texto{
+            font-size: 2.2rem;
+        }
+    }
+    .contacto{
+        .titulo-contacto{
+            font-size: 2.5rem;
+        }
+    }
+    .btn{
+        width: 100%;
     }
 }
