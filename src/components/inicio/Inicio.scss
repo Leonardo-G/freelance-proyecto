@@ -1,10 +1,20 @@
 @import "../../styles/variables.scss";
 
+.inicio.desaparecer{
+    opacity: 0;
+    transition: 1.2s all ease;
+    visibility: hidden;
+}
+
 .inicio{
     position: relative;
     width: 100%;
     height: 100vh;
     min-height: 70rem;
+    opacity: 1;
+    transition: 1.2s all ease;
+    z-index: 999999;
+    background-color: #fff;
     .inicio__flex{
         display: flex;
         align-items: center;

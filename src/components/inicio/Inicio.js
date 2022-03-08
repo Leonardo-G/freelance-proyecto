@@ -6,7 +6,8 @@ import btn_bottom from "../../assets/btn-bottom.png";
 
 import "./Inicio.scss";
 
-export const Inicio = () => {
+export const Inicio = ({ handleInicioOff }) => { 
+
     return (
         <section className='inicio'>
             <div className='container'>
@@ -15,12 +16,12 @@ export const Inicio = () => {
                     <h1 className='titulo-inicio'>Edwin Piston</h1>
                 </div>
             </div>
-            <Link 
+            <div
+                onClick={ handleInicioOff }
                 className='inicio__btn' 
-                to="/"
             >
                 <img className='btn-img' src={ btn_bottom } alt="flecha indicativo hacia abajo"/>
-            </Link>
+            </div>
         </section>
     )
 }
