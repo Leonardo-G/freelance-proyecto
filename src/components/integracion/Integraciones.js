@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import "./Integracion.scss";
 
-import mer_libre from "../assets/integraciones/mercado-libre.png";
-import mer_pago from "../assets/integraciones/mercado-pago.png";
-import pedidos_ya from "../assets/integraciones/pedidos-ya.jpg";
-import bamboo from "../assets/integraciones/bamboo.png";
-import openstreetmap from "../assets/integraciones/openstreetmap.png";
-import google_maps from "../assets/integraciones/google_maps.png";
+import mer_libre from "../../assets/integraciones/mercado-libre.png";
+import mer_pago from "../../assets/integraciones/mercado-pago.png";
+import pedidos_ya from "../../assets/integraciones/pedidos-ya.jpg";
+import bamboo from "../../assets/integraciones/bamboo.png";
+import openstreetmap from "../../assets/integraciones/openstreetmap.png";
+import google_maps from "../../assets/integraciones/google_maps.png";
 
 export const Integraciones = () => {
     const UIanimacion = useRef(null);
@@ -29,6 +29,7 @@ export const Integraciones = () => {
         UIanimacion.current = document.querySelector(".integracion");
         observer.observe(UIanimacion.current);
 
+        //eslint-disable-next-line
     }, [])
 
 

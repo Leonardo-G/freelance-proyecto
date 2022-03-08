@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Spinner } from './Spinner';
+import { Spinner } from '../spinner/Spinner';
 
-import videoForm from "../assets/correoenviado.mp4";
+import videoForm from "../../assets/correoenviado.mp4";
 
-import "../assets/mundo.png";
+import "../../assets/mundo.png";
 import "./Form.scss";
 
 export const Form = () => {

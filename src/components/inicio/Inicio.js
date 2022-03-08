@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from "../assets/logo.svg";
-import btn_bottom from "../assets/btn-bottom.png";
+import logo from "../../assets/logo.svg";
+import btn_bottom from "../../assets/btn-bottom.png";
 
 import "./Inicio.scss";
 

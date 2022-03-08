@@ -1,10 +1,10 @@
 import React from 'react';
 
-import logo from "../assets/logo.svg";
-import mano from "../assets/mano.svg";
-import hola from "../assets/hola.svg";
+import logo from "../../assets/logo.svg";
+import mano from "../../assets/mano.svg";
+import hola from "../../assets/hola.svg";
 
-import menu from "../assets/menu.svg";
+import menu from "../../assets/menu.svg";
 
 import "./Header.scss";
 

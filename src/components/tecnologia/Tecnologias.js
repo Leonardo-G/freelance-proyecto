@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import { Tecnologia } from './Tecnologia';
 
-import btn_left from "../assets/arrow-left-circle.svg";
-import btn_right from "../assets/arrow-right-circle.svg";
+import btn_left from "../../assets/arrow-left-circle.svg";
+import btn_right from "../../assets/arrow-right-circle.svg";
 
-import ide1 from "../assets/ides/android-studio.svg";
-import ide2 from "../assets/ides/ide2.svg";
-import ide3 from "../assets/ides/eclipse.svg";
-import ide4 from "../assets/ides/vsc.svg";
-import ide5 from "../assets/ides/ij-ide.svg";
+import ide1 from "../../assets/ides/android-studio.svg";
+import ide2 from "../../assets/ides/ide2.svg";
+import ide3 from "../../assets/ides/eclipse.svg";
+import ide4 from "../../assets/ides/vsc.svg";
+import ide5 from "../../assets/ides/ij-ide.svg";
 
-import lenguaje1 from "../assets/lenguajes/c.png";
-import lenguaje2 from "../assets/lenguajes/c++.png";
-import lenguaje3 from "../assets/lenguajes/ce.png";
-import lenguaje4 from "../assets/lenguajes/java.png";
-import lenguaje5 from "../assets/lenguajes/phyton.png";
-import lenguaje6 from "../assets/lenguajes/php.png";
-import lenguaje7 from "../assets/lenguajes/ts.png";
-import lenguaje8 from "../assets/lenguajes/javascript.png";
+import lenguaje1 from "../../assets/lenguajes/c.png";
+import lenguaje2 from "../../assets/lenguajes/c++.png";
+import lenguaje3 from "../../assets/lenguajes/ce.png";
+import lenguaje4 from "../../assets/lenguajes/java.png";
+import lenguaje5 from "../../assets/lenguajes/phyton.png";
+import lenguaje6 from "../../assets/lenguajes/php.png";
+import lenguaje7 from "../../assets/lenguajes/ts.png";
+import lenguaje8 from "../../assets/lenguajes/javascript.png";
 
-import framework1 from "../assets/framworks/codeigniter.png";
-import framework2 from "../assets/framworks/dj.png";
-import framework3 from "../assets/framworks/react.png";
-import framework4 from "../assets/framworks/net.png";
-import framework5 from "../assets/framworks/laravel.png";
-import framework6 from "../assets/framworks/angular.png";
+import framework1 from "../../assets/framworks/codeigniter.png";
+import framework2 from "../../assets/framworks/dj.png";
+import framework3 from "../../assets/framworks/react.png";
+import framework4 from "../../assets/framworks/net.png";
+import framework5 from "../../assets/framworks/laravel.png";
+import framework6 from "../../assets/framworks/angular.png";
 
-import mobile1 from "../assets/frameworks-mobiles/flutter.png";
-import mobile2 from "../assets/frameworks-mobiles/xamarin.png";
+import mobile1 from "../../assets/frameworks-mobiles/flutter.png";
+import mobile2 from "../../assets/frameworks-mobiles/xamarin.png";
 
 import "./Tecnologias.scss";
 

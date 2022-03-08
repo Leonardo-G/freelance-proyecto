@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from '../components/Home';
-import { Inicio } from '../components/Inicio';
+import { Inicio } from '../components/inicio/Inicio';
 
 export const AppRouter = ({ children }) => {
     return (

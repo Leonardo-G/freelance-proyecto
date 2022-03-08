@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Tecnologias } from './Tecnologias';
-import { Integraciones } from './Integraciones';
+import { Tecnologias } from './tecnologia/Tecnologias';
+import { Integraciones } from './integracion/Integraciones';
 
 
 import "./Home.scss";
-import { Form } from './Form';
-import { Footer } from './Footer';
-import { Header } from './Header';
+import { Form } from './formulario/Form';
+import { Footer } from './footer/Footer';
+import { Header } from './header/Header';
 
 export const Home = () => {
     return (

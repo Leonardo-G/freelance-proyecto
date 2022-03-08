@@ -2,9 +2,9 @@ import React from 'react';
 
 import "./Footer.scss";
 
-import img from "../assets/redes/1.png";
-import linkedin from "../assets/redes/linkedin.png";
-import github from "../assets/redes/github.png";
+import img from "../../assets/redes/1.png";
+import linkedin from "../../assets/redes/linkedin.png";
+import github from "../../assets/redes/github.png";
 
 export const Footer = () => {
     return (
