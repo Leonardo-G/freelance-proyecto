@@ -1,5 +1,5 @@
 .footer{
-    padding: 10rem 0;
+    padding: 10rem 0 2rem 0;
     width: 100%;
     text-align: center;
     p{
@@ -19,6 +19,14 @@
             &:first-of-type{
                 margin-left: 0;
             }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .footer{
+        p{
+            font-size: 1.4rem;
         }
     }
 }

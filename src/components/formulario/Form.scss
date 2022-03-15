@@ -147,7 +147,7 @@
 }
 
 //BOTON GENERAL DEL FORMULARIO
-.btn{
+.btn-home{
     padding: 2rem 3rem;
     font-size: 1.6rem;
     display: inline-block;
@@ -163,13 +163,21 @@
     font-family: $fue-principal;
 }
 
-
-@media (max-width: 620px) {
+@media (max-width: 860px) {
     .contacto{
         .titulo-contacto{
             font-size: 3.5rem;
         }
+        .titulo-contacto-mundo{
+            img{
+                width: 4rem;
+            }
+        }
     }
+}
+
+
+@media (max-width: 620px) {
     .contacto__enviado{
         .info-container{
             width: 95%;
@@ -193,6 +201,15 @@
 
 @media (max-width: 420px) {
     .contacto__enviado{
+        height: 52.5rem;
+        .fondo-activo{
+            height: 26.5rem;
+        }
+        .enviado-video{
+            video{
+                height: 25rem;
+            }
+        }
         .info-container{
             p{
                 font-size: 2.2rem;
@@ -204,10 +221,40 @@
     }
     .contacto{
         .titulo-contacto{
-            font-size: 2.5rem;
+            font-size: 2rem;
+            margin-top: 0;
+            &:first-of-type{
+                margin-top: 2rem;
+            }
+        }
+        .titulo-contacto-mundo{
+            img{
+                width: 3rem;
+            }
+        }
+        .formulario{
+            height: 52.5rem;
+            padding: 8rem 0 0 0;
+            row-gap: 1rem;
+            input, textarea{
+                font-size: 1.4rem;
+                padding: 1.5rem 2rem;
+            }
+            textarea{
+                min-height: 15rem;
+            }
+            .formulario__error{
+                font-size: 1.2rem;
+            }
+        }
+        .enviado-fondo{
+            padding-top: 0;
+            .activo-titulo{
+                margin-bottom: 3rem;
+            }
         }
     }
-    .btn{
-        width: 100%;
+    .btn-home{
+        font-size: 1.3rem;
     }
 }

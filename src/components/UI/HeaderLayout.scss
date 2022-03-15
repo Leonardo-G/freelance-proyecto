@@ -1,0 +1,80 @@
+@import "../../styles/variables.scss";
+
+.fondo-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65rem;
+    z-index: -1;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.menu-layout{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    margin-top: 1.5rem;
+    a{
+        color: $dark;
+        font-family: $fue-principal;
+        font-weight: 600;
+        font-size: 3.6rem;
+        margin-top: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+.layout-img{
+    text-align: center;
+    z-index: 1;
+    margin: 20rem 0;
+}
+
+@media (max-width: 620px) {
+    .menu-layout{
+        margin-top: 0.8rem;
+        align-items: center;
+        a{
+            font-size: 2.5rem;
+            margin-top: 0;
+        }
+        img{
+            height: 12.5rem;
+        }
+    }
+    .layout-img{
+        margin: 15rem 0;
+        img{
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .fondo-menu{
+        img{
+            height: 35rem;
+        }
+    }
+    .menu-layout{
+        align-items: flex-start;
+        img{
+            height: 5.5rem;
+        }
+        .layout-enlace{
+            font-size: 1.4rem;
+            margin-top: 1rem;
+        }
+    }
+    
+    .layout-img{
+        margin: 15rem 0;
+        img{
+            width: 13.5rem;
+        }
+    }
+}

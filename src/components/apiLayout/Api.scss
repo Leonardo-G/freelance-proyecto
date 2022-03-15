@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+
+/* ==== API==== */
+
+.description{
+    p{
+        margin-bottom: 17rem;
+    }
+}
+
+.api-img {
+    margin-top: 7rem;
+    padding: 30rem 0;
+    .block-enlace{
+        text-align: center;
+        display: block;
+        margin-top: 30rem;
+        text-align: center;
+    }
+}
+
+/* ==== MEDIA QUERIES ==== */
+/* ==== mobile ==== */
+
+@media (max-width: 620px) {
+    .description{
+        p{
+            margin-bottom: 10rem;
+        }
+    }
+    .api-img{
+        padding: 12.5rem 0;
+        .block-enlace{
+            margin-top: 20rem;
+        }
+    }
+    .menu-pro{
+        justify-content: center;
+    }
+}
+  
+@media (max-width: 425px) {
+    .description{
+        p{
+            margin-bottom: 8rem;
+        }
+    }
+    .api-img{
+        padding: 5rem;
+        .block-enlace{
+            margin-top: 10rem;
+        }
+        img{
+            width: 50%;
+        }
+    }
+}

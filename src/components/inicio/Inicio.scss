@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
 
 .inicio.desaparecer{
     opacity: 0;
@@ -21,10 +22,25 @@
         justify-content: space-between;
         min-height: 70rem;
         height: 95vh;
+        img{
+            transform: translateY(-70%);
+            transition: .8s all ease;
+        }
+        .img-activo{
+            transform: translateY(0%);
+            transition: .8s all ease;
+        }
     }
     .titulo-inicio{
         color: $col-secundario;
         font-size: 10rem;
+        opacity: 0;
+        transition: .8s all ease;
+        font-family: 'Playfair Display', serif;
+    }
+    .titulo-inicio-activo{
+        opacity: 1;
+        transition: .8s all ease;
     }
     .inicio__btn{
         position: relative;
@@ -87,12 +103,25 @@
 
 @media (max-width:480px) {
     .inicio{
+        .titulo-inicio{
+            font-size: 6rem;
+            text-align: center;
+            margin-top: 0;
+        }
         .inicio__flex{
             flex-wrap: wrap;
             align-items: stretch;
             img{
-                width: 95%;
+                width: 80%;
                 margin: 0 auto;
+            }
+        }
+        .inicio__btn{
+            width: 4rem;
+            height: 4rem;
+            .btn-img{
+                width: 2rem;
+                height: 2rem;
             }
         }
     }

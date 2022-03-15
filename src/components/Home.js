@@ -6,6 +6,7 @@ import { Form } from './formulario/Form';
 import { Footer } from './footer/Footer';
 import { Header } from './header/Header';
 import { Inicio } from './inicio/Inicio';
+import { Proyectos } from './proyectos/Proyectos';
 
 import "./Home.scss";
 
@@ -43,6 +44,7 @@ export const Home = () => {
                     <div className="home">
                         <div className='container'>
                             <Header />
+                            <Proyectos />
                             <Tecnologias />
                             <Integraciones />
                         </div>

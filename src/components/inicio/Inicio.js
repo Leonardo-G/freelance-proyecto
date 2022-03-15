@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from "../../assets/logo.svg";
@@ -7,6 +7,11 @@ import btn_bottom from "../../assets/btn-bottom.png";
 import "./Inicio.scss";
 
 export const Inicio = ({ handleInicioOff }) => { 
+
+    useEffect(() => {
+        document.querySelector(".inicio__flex img").classList.add("img-activo");
+        document.querySelector(".titulo-inicio").classList.add("titulo-inicio-activo")
+    }, [])
 
     return (
         <section className='inicio'>

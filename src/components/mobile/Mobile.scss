@@ -1,0 +1,149 @@
+ /* ==== desarrollo mobile ==== */
+.mobile {
+    .mobile__img{
+        text-align: center;
+    }
+  .boom {
+      height: 80rem;
+  }
+  .boom-responsive{
+      display: none;
+  }
+  .p-mobile {
+      p{
+        text-align: center;
+        font-weight: 700;
+        font-size: 4.8rem;
+        line-height: 7rem;
+        margin-top: 9rem;
+        &:first-of-type{
+            margin-top: 0;
+        }
+
+    }
+    span {
+      color: #ff6600;
+    }
+  }
+}
+
+.mobile-logos{
+    width: 100%;
+    padding: 15rem 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 15rem;
+    flex-wrap: wrap;
+    row-gap: 15rem;
+    align-items: center;
+    .android{
+        width: 30rem;
+        transform: translateX(-50%);
+        transition: 0.2s all ease;
+        opacity: 0;
+    }
+    .ios{
+        height: 25rem;
+        z-index: -1;
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    .flutter{
+        width: 25rem;
+        transform: translateX(-100%);  
+        opacity: 0;  
+    }
+}
+
+.true{
+    .android, .ios, .flutter{
+        transform: translateX(0%);
+        transition: 0.9s all ease-in-out;
+        opacity: 1;
+    }
+    .ios{
+        transition-delay: 0.4s;
+    }
+    .flutter{
+        transition-delay: 0.8s;
+    }
+}
+
+@media (max-width: 1120px) {
+    .mobile-logos{
+        .android{
+            width: 20rem;
+        }
+        .ios{
+            height: 15rem;
+        }
+        .flutter{
+            width: 21.5rem;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .mobile {
+        .mobile__img{
+            text-align: center;
+        }
+      .boom {
+          width: 85%;
+          height: auto;
+      }
+      .p-mobile {
+          p{
+            font-size: 3.5rem;
+            margin-top: 4rem;
+        }
+      }
+    }
+    .mobile-logos{
+        column-gap: 5rem;
+        .android{
+            width: 35%;
+        }
+        .ios{
+            width: 45%;
+            height: auto;
+        }
+        .flutter{
+            width: 30%;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .mobile {
+        .boom {
+            display: none;
+        }
+        .boom-responsive{
+            display: inherit;
+            margin: 20rem auto 15rem auto;
+            width: 80%;
+        }
+        .p-mobile {
+            p{
+                font-size: 2.7rem;
+                line-height: 5.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .mobile{
+        .boom-responsive{
+            width: 100%;
+            margin: 15rem auto 10rem auto;
+        }
+        .p-mobile {
+            p{
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+        }
+    }
+}

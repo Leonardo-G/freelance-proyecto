@@ -1,13 +1,37 @@
 @import "../../styles/variables.scss";
 
 .menu-btn{
+    position: relative;
     position: absolute;
     top: 3rem;
     right: 5%;
     z-index: 999;
     width: 4rem;
+    height: 4rem;
     cursor: pointer;
     display: none;
+    .menu-btn-lineas{
+        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 3.5rem;
+        height: 0.4rem;
+        background-color: $dark;
+        &:after, &::before{
+            content: "";
+            position: absolute;
+            top: 200%;
+            left: 0;
+            width: 3.5rem;
+            height: 0.4rem;
+            background-color: $dark;
+        }
+        &::before{
+            top: -200%;
+        }
+    }
 }
 
 .ov-hidden{
@@ -19,6 +43,9 @@
     column-gap: 4rem;
     margin-top: 3rem;
     justify-content: right;
+    .navegacion__logo{
+        display: none;
+    }
     .enlace{
         text-decoration: none;
         font-size: 3.6rem;
@@ -30,6 +57,7 @@
 
 .header{
     margin-top: 14rem;
+    margin-bottom: 25rem;
     display: flex;
     align-items: center;
     column-gap: 5rem;
@@ -37,6 +65,9 @@
         animation-name: mano-saludo;
         animation-iteration-count: infinite;
         animation-duration: 1.56s;
+        margin-left: 4rem;
+        margin-bottom: 3rem;
+        width: 5.5rem;
     }
     .info-saludo{
         .saludo-hola{
@@ -86,9 +117,19 @@
         display: block;
     }
     .header{
-        flex-direction: column;
         .header__logo{
-            min-width: 90%;
+            width: 48%;
+        }
+        .info-texto{
+            font-size: 3rem;
+        }
+        .header__mano{
+            width: 4rem;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+        }
+        .info-texto{
+            margin-top: 2.5rem;
         }
     }
     .navegacion{
@@ -106,6 +147,11 @@
         row-gap: 4rem;
         transform: translateX(100%);
         transition: .3s all ease;
+        .navegacion__logo{
+            display: inherit;
+            width: 15rem;
+            margin-bottom: 3rem;
+        }
     }
     .navegacion-activo{
         transform: translateX(0%);
@@ -115,19 +161,31 @@
 
 @media (max-width: 620px) {
     .header{
-        .header__logo{
-            width: 100%;
+        column-gap: 0;
+        margin-bottom: 10rem;
+        .info-texto{
+            font-size: 2.5rem;
         }
-    }
-    .header__info{
-        text-align: center;
     }
 }
 
 @media (max-width: 420px) {
+    .navegacion{
+        .enlace{
+            font-size: 2rem;
+        }
+    }
     .header{
+        align-items: flex-start;
+        .header__mano{
+            width: 3rem;
+            height: auto;
+        }
+        .saludo-hola{
+            height: 3rem;
+        }
         .info-texto{
-            font-size: 3rem;        
+            font-size: 1.8rem;        
         }
     }
 }

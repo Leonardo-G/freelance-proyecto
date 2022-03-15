@@ -1,7 +1,7 @@
 import React from 'react';
 
 import logo from "../../assets/logo.svg";
-import mano from "../../assets/mano.svg";
+import mano from "../../assets/mano.png";
 import hola from "../../assets/hola.svg";
 
 import menu from "../../assets/menu.svg";
@@ -30,9 +30,10 @@ export const Header = () => {
                 className='menu-btn'
                 onClick={ handleToggleMenu }    
             >
-                <img src={ menu } alt="imagen del botón del menu"/>    
+                <div className='menu-btn-lineas'></div>    
             </div>
             <nav className='navegacion'>
+                <img className='navegacion__logo' src={ logo } alt="logo edwin pistón"/>
                 <a onClick={ handleCloseMenu } href='#proyecto' className='enlace'>Proyecto</a>
                 <a onClick={ handleCloseMenu } href='#tecnologia' className='enlace'>Tecnologías</a>
                 <a onClick={ handleCloseMenu } href='#contacto' className='enlace'>Contacto</a>

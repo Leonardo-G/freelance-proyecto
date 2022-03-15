@@ -58,8 +58,9 @@
 
 @media (max-width: 1100px) {
     .integracion{
+        height: 90rem;
         img{
-            height: 20rem;
+            height: 12.5rem;
         }
         .openstreetmap{
             height: 15rem;
@@ -72,32 +73,34 @@
 
 @media (max-width: 620px) {
     .integracion{
-        height: 90rem;
+        height: 70rem;
+        column-gap: 3rem;
         margin: 10rem 0;
         img{
-            height: 12.5rem;
-        }
-        .openstreetmap{
             height: 10rem;
         }
+        .openstreetmap{
+            height: 5rem;
+        }
         .bamboo{
-            height: 8rem;
+            height: 7rem;
         }
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 420px) {
     .integracion{
-        height: 65rem;
-        column-gap: 4rem;
+        height: 40rem;
+        column-gap: 2rem;
+        margin: 6rem 0;
         img{
-            height: 10rem;
+            height: 6rem;
         }
         .openstreetmap{
             height: 5rem;
         }
         .bamboo{
-            height: 5rem;
+            height: 4rem;
         }
     }
 }

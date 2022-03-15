@@ -1,0 +1,125 @@
+//compañera may
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&display=swap");
+@import "./variables.scss";
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: $dark;
+  font-family: $BeVietnam;
+  overflow-x: hidden;
+  a {
+    text-decoration: none;
+  }
+}
+
+  
+  /* ==== MEDIA QUERIES ==== */
+  /* ==== mobile ==== */
+  
+  @media (max-width: 620px) {
+    .menu-pro{
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    /*=== totem ===*/
+
+    .main {
+      display: block;
+      margin: 0 auto;
+      max-width: 40rem;
+      padding: 1.6rem;
+    }
+  
+    .main {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "check list"
+        "check list"
+        "check list"
+        "check list";
+    }
+  
+    // .check {
+    //   display: grid;
+    //   grid-template-columns: 0.5fr;
+    //   margin-left: 1.6rem;
+    //   margin-top: 7rem;
+    //   grid-template-rows: auto;
+    //   grid-template-areas:
+    //     " check1 ."
+    //     "check2 ."
+    //     " check3 ."
+    //     " check4 .";
+    //   grid-area: check;
+    // }
+  
+    // .check1 {
+    //   grid-area: check1;
+    // }
+  
+    // .check2 {
+    //   grid-area: check2;
+    // }
+  
+    // .check3 {
+    //   grid-area: check3;
+    // }
+  
+    // .check4 {
+    //   grid-area: check4;
+    // }
+  
+    // .totem-list {
+    //   display: grid;
+    //   grid-template-areas:
+    //     "list1 list1 list1 ."
+    //     "list2 list2 list2 ."
+    //     "list3 list3 list3 ."
+    //     "list4 list4 list4 .";
+    //   grid-area: list;
+    // }
+  
+    // .list1 {
+    //   grid-area: list1;
+    // }
+  
+    // .list2 {
+    //   grid-area: list2;
+    // }
+  
+    // .list3 {
+    //   grid-area: list3;
+    // }
+  
+    // .list4 {
+    //   grid-area: list4;
+    // }
+  
+    .margin {
+      grid-area: margin;
+    }
+    .parrafo {
+      margin: 1.6rem;
+      text-align: start;
+    }
+  
+    /* ==== Web ==== */
+  
+    .link {
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: 27px;
+      text-decoration-line: underline;
+      color: #0b1c26;
+    }
+  }

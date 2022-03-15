@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Spinner } from '../spinner/Spinner';
 
 import videoForm from "../../assets/correoenviado.mp4";
+import mundo from "../../assets/mundo.png";
 
 import "../../assets/mundo.png";
 import "./Form.scss";
@@ -79,9 +80,11 @@ export const Form = () => {
         const bloque2 = document.querySelector("#bloque2");
         const bloque3 = document.querySelector("#bloque3");
         const bloque4 = document.querySelector("#bloque4");
+        const video = document.querySelector("#video");
 
         bloque1.style.display = "none";
         bloque2.style.display = "inherit"
+        video.play();
 
         setTimeout(() => {
             bloque3.classList.add("fondo-activo")
@@ -113,7 +116,7 @@ export const Form = () => {
             }
             <h2 className='titulo'>Contacto</h2>
             <p className='titulo-contacto'>¡Trabajemos juntos!</p>
-            <p className='titulo-contacto'>Desde cualquier parte del mundo</p>
+            <p className='titulo-contacto'>Desde cualquier parte del mundo <span className='titulo-contacto-mundo'><img src={ mundo } alt="imagen del planeta"/></span></p>
             <div id="bloque1" className='contacto__fondo'>
                 <form 
                     className='formulario'
@@ -144,7 +147,7 @@ export const Form = () => {
                     ></textarea>
                     <p className='formulario__error'>{ error }</p>
                     <input 
-                        className='btn btn-submit'
+                        className='btn-home btn-submit'
                         type="submit"
                         value="Enviar"
                     />
@@ -152,8 +155,7 @@ export const Form = () => {
             </div>
             <div id='bloque2' className='contacto__enviado'>
                 <div id="bloque4" className='enviado-video'>
-                    <video src={ videoForm }
-                        autoPlay
+                    <video id='video' src={ videoForm }
                         muted
                         loop
                     ></video>
@@ -162,7 +164,7 @@ export const Form = () => {
                     <div id='bloque5' className='enviado-contenedor'>
                         <h3 className='activo-titulo'>¡Tu mensaje ha sido enviado!</h3>
                         <div 
-                            className='btn'
+                            className='btn-home'
                             onClick={ handleReady }    
                         >Aceptar</div>
                     </div>
